@@ -33,15 +33,15 @@ int binarySearch(string target)
     return index;
 }
 
-void genJump()
-{
-    
-}
-
 int main()
 {
-    ifstream inputFile("input.txt", ios::in);
-    ofstream outputFile("output.txt", ios::out);
+    string inputFileAddr, outputFileAddr;
+    cout << "Enter input file address: ";
+    cin >> inputFileAddr;
+    cout << "Enter output file address: ";
+    cin >> outputFileAddr;
+    ifstream inputFile(inputFileAddr, ios::in);
+    ofstream outputFile(outputFileAddr, ios::out);
     string inputStr, inputInst, inputReg[3], inputRR, inputLabel = "";
     stringstream inputSS;
     vector<Instruction*> instructions;
